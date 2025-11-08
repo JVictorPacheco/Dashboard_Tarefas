@@ -1,3 +1,5 @@
+<!-- Parei aqui, tenho que colocar o div -->
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -25,10 +27,56 @@
         <div class="container">
             <section class="task-form-section">
                 <h2 class="section__title"> Nova Tarefa </h2>
+                <form class="task-form" id="taskForm" novalidate>
+                    <div class="form-group">
+                        <label for="taskTitle" class="form-label">Titulo da tarefa </label>
+                        <input type="text" id="taskTitle" class="form-input" planceholder="Digite o titulo da tarefa"
+                            required aria-describedby="taskTitleError">
+                        <span id="taskTitleError" class="erro-message" role="alert"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="taskDescription" class="form-label"> Descrição (opcional) </label>
+                        <textarea id="taskDescription" class="form-input form-textarea"
+                            placeholder="Adicione detalhes sobre a tarefa" rows="3">
+                        </textarea>
+                    </div>
+
+                    <button type="submit" class="btn brn-primary">
+                        Adicionar Tarefa
+                    </button>
+                </form>
             </section>
-                
+
+            <section class="task-list-section">
+                <div class="task-controls">
+                    <h2 class="section_title"> Suas Tarefas </h2>
+                    <div class="filter-buttons" role="tablist" aria-label="Filtos de tarefa">
+                        <button class="filter-btn filter-btn--active" data-filter="all" role="tab"
+                            aria-selected="false">Pendentes</button>
+                        <button class="filter-btn" data-filter="completed" role="tab"
+                            aria-selected="false">Concluídas</button>
+                    </div>
+                </div>
+                        
+                <div class="task-list" id="taskList" role="region" aria-live="polite">
+                        <!-- Tarefas serão inseridas aqui via 
+                        JavaScript -->
+                </div>
+
+                <div class="empty-state" id="empty-state">
+                    <p> Nenhum tarefa encontrada</p>
+                    <p> Adicione a sua primeira tarefa</p>
+                </div>
+            </section>
         </div>
     </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text"> &copy; 2024 Dashboard de Tarefas. Projeto de estudos.</p>
+        </div>
+    </footer>
 
 
     <script src="src/scripts/utils.js"></script>

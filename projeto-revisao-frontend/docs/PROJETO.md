@@ -35,9 +35,11 @@ Um sistema simples de gerenciamento de tarefas com foco em responsividade e aces
 3. **Marcar como concluída** - Toggle com feedback visual
 4. **Filtrar tarefas** - Por status (todas, pendentes, concluídas)
 5. **Deletar tarefa** - Com confirmação
-6. **Persistência** - Local Storage
+6. **Persistência** - Local Storage + Simulação de API
 7. **Tema escuro/claro** - Toggle de tema
 8. **Responsividade** - Mobile, tablet, desktop
+9. **API Mock** - Simulação de endpoints REST para CRUD de tarefas
+10. **Loading states** - Estados de carregamento durante requisições
 
 ## Princípios SOLID a Aplicar
 - **S** - Single Responsibility: Cada função tem uma responsabilidade
